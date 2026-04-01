@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mewi Nails ✨ Refugio de Brillo Ratti</title>
+    <title>Mewi Nails ✨ Mundo Ratti</title>
     <style>
         :root {
             --rosa-mewi: #ffb7c5;
@@ -23,13 +23,8 @@
         .logo-mewi { width: 100%; max-width: 250px; border-radius: 20px; margin-bottom: 10px; }
         
         .bienvenida { background: #fff0f5; padding: 20px; border-radius: 25px; margin-bottom: 20px; border: 1px dashed var(--rosa-fuerte); }
-        .bienvenida h1 { color: var(--rosa-fuerte); font-family: 'Brush Script MT', cursive; font-size: 38px; margin: 0; }
-        .bienvenida p { font-size: 13px; margin: 8px 0 0; color: var(--texto); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-
-        .promo-card { 
-            background: #fff; border: 2px dashed var(--rosa-mewi); border-radius: 25px; 
-            padding: 20px; margin-bottom: 20px; min-height: 50px; display: flex; align-items: center; justify-content: center;
-        }
+        .bienvenida h1 { color: var(--rosa-fuerte); font-family: 'Brush Script MT', cursive; font-size: 42px; margin: 0; }
+        .frase-top { color: var(--rosa-fuerte); font-weight: 800; font-size: 15px; margin-top: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
 
         .social-bar { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
         
@@ -42,6 +37,9 @@
 
         .btn-wa { background: #25d366; color: white; }
         .btn-ig { background: white; color: #E1306C; border: 1.5px solid #E1306C; }
+        
+        .btn-calc { background: var(--lila-mewi); color: white; margin-top: 10px; border-radius: 15px; padding: 12px; display: inline-block; text-decoration: none; font-weight: bold; font-size: 12px; transition: 0.3s; }
+        .btn-calc:hover { background: var(--rosa-fuerte); }
 
         .cosito {
             background: #fffafb; border: 1.5px solid var(--rosa-mewi); border-radius: 20px;
@@ -64,8 +62,6 @@
         .tag-sistema { background: var(--rosa-mewi); color: white; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: bold; margin-bottom: 5px; display: inline-block; }
 
         .footer { margin-top: 25px; font-size: 11px; font-weight: bold; color: var(--rosa-fuerte); opacity: 0.8; }
-        .quote { font-family: 'Brush Script MT', cursive; color: var(--lila-mewi); font-size: 26px; margin-top: 15px; line-height: 1.1; }
-        
         .dimi-ratti { font-size: 9px; vertical-align: middle; }
     </style>
 </head>
@@ -75,12 +71,8 @@
     <img src="https://i.postimg.cc/J00fzhLf/file-00000000f03c71f5ba680afa3dfc85c8.png" class="logo-mewi">
     
     <div class="bienvenida">
-        <h1>¡Bienvenidas!<span class="dimi-ratti">🐭</span></h1>
-        <p>Tu refugio de amor y brillitos <span class="dimi-ratti">🌸</span> favorito💖</p>
-    </div>
-
-    <div class="promo-card">
-        <p style="color: var(--rosa-mewi); font-weight: bold; font-style: italic; margin: 0;">🐭 Próximamente dulces sorpresas en el refugio...</p>
+        <h1>¡Bienvenidas! <span class="dimi-ratti">🐭</span></h1>
+        <div class="frase-top">"Uñitas tiernas para manos que brillan" ✨💖</div>
     </div>
 
     <div class="social-bar">
@@ -93,6 +85,15 @@
     </div>
 
     <div class="cosito" onclick="toggle(this)">
+        <div class="cosito-header">💰 COTIZA TU SET (CALCULADORA) <span class="dimi-ratti">🐭</span> <span class="icono">▼</span></div>
+        <div class="cosito-contenido" style="text-align: center;">
+            <p style="text-align: left;">¿Quieres saber el valor de tu set? Elige tu sistema favorito, el largo y el arte para obtener un estimado. <b>Tin! ✨</b></p>
+            <a href="https://melanypst-glitch.github.io/nails-mewi/" target="_blank" class="btn-calc">📊 ABRIR CALCULADORA DE PRECIOS</a>
+            <p style="font-size: 10px; margin-top: 10px; color: #aaa;">(Tómale pantallazo al resultado para tu cita)</p>
+        </div>
+    </div>
+
+    <div class="cosito" onclick="toggle(this)">
         <div class="cosito-header">💅 MENÚ DE SISTEMAS PRO <span class="dimi-ratti">🐭</span> <span class="icono">▼</span></div>
         <div class="cosito-contenido">
             <span class="tag-sistema">MÁS PEDIDO</span>
@@ -100,7 +101,7 @@
             <span class="tag-sistema">TECNOLOGÍA</span>
             <div class="info-box"><b>• Polygel:</b> Híbrido flexible y ligero 📏.</div>
             <span class="tag-sistema">PROTECCIÓN</span>
-            <div class="info-box"><b>• Kapping Base Rubber:</b> Refuerzo nivelador para crecer sanitas 🧸.</div>
+            <div class="info-box"><b>• Kapping Base Rubber:</b> Refuerzo para crecer sanitas 🧸.</div>
             <span class="tag-sistema">EFECTO NATURAL</span>
             <div class="info-box"><b>• Soft Gel:</b> Tips de gel delgaditos y naturales 🍦.</div>
             <span class="tag-sistema">DURABILIDAD</span>
@@ -109,50 +110,40 @@
     </div>
 
     <div class="cosito" onclick="toggle(this)">
-        <div class="cosito-header">🎨 EL REFUGIO DEL ARTE (NAIL ART) <span class="dimi-ratti">🐭</span> <span class="icono">▼</span></div>
+        <div class="cosito-header">🎨 ARTE Y DISEÑO (NAIL ART) <span class="dimi-ratti">🐭</span> <span class="icono">▼</span></div>
         <div class="cosito-contenido">
-            • <b>Diseños & Efectos:</b> Baby boomer, degradés, Chrome <span class="dimi-ratti">💿</span> y aurora.<br>
-            • <b>Mano Alzada Sencilla:</b> Detalles lindos y minimalistas <span class="dimi-ratti">✍️</span> (corazoncitos, puntos, líneas, rastros cuchi).<br>
-            • <b>Joyas:</b> Cristales y dijes para un toque de brillo 💎.<br><br>
-            <em>*El valor depende de la complejidad. Tin! ✨</em>
+            • <b>Efectos:</b> Baby boomer, Chrome <span class="dimi-ratti">💿</span> y aurora.<br>
+            • <b>Mano Alzada Sencilla:</b> Detalles minimalistas <span class="dimi-ratti">✍️</span> (corazones, puntos, líneas).<br>
+            • <b>Brillitos:</b> Cristales y dijes para resaltar tu set 💎.
         </div>
     </div>
 
     <div class="cosito" onclick="toggle(this)">
-        <div class="cosito-header">🧼 SALUD Y LIMPIEZA <span class="dimi-ratti">🐭</span> <span class="icono">▼</span></div>
+        <div class="cosito-header">🧼 SALUD Y SEGURIDAD <span class="dimi-ratti">🐭</span> <span class="icono">▼</span></div>
         <div class="cosito-contenido">
             • <b>Manicura Combinada:</b> Limpieza profunda de cutícula 🧼.<br>
-            • <b>Uñitas Lastimadas:</b> ¡Ojo! <span class="dimi-ratti">🚨</span> Si tienes alguna uñita con hongo, herida abierta o muy débil, <b>por favor consúltanos antes de agendar</b>. La salud de tus manos es lo primero en este refugio.
+            • <b>Consulta de Salud:</b> <span class="dimi-ratti">🚨</span> Si tienes alguna uñita lastimada, con hongo o herida abierta, <b>por favor consúltanos antes</b> de agendar.
         </div>
     </div>
 
     <div class="cosito" onclick="toggle(this)">
         <div class="cosito-header">💖 ¿POR QUÉ ELEGIRNOS? <span class="dimi-ratti">🐭</span> <span class="icono">▼</span></div>
         <div class="cosito-contenido">
-            • <b>Técnica Pro:</b> Especialista en sistemas esculpidos y salud de la uña ✨.<br>
-            • <b>Higiene Total:</b> Instrumental 100% esterilizado para tu seguridad 🧼.<br>
-            • <b>Amor al Detalle:</b> No solo pintamos, creamos un diseño que hable de ti.<br>
-            • <b>Garantía Mewi:</b> 5 días de respaldo en tu set 🎀.
+            • <b>Especialista:</b> Enfocada en sistemas y salud de la uña ✨.<br>
+            • <b>Higiene:</b> Instrumental 100% esterilizado 🧼.<br>
+            • <b>Garantía Mewi:</b> 5 días de respaldo en tu servicio 🎀.
         </div>
     </div>
 
     <div class="cosito" onclick="toggle(this)">
-        <div class="cosito-header">🛠️ MANTENIMIENTO Y REGLAS <span class="dimi-ratti">🐭</span> <span class="icono">▼</span></div>
+        <div class="cosito-header">🛠️ MANTENIMIENTO <span class="dimi-ratti">🐭</span> <span class="icono">▼</span></div>
         <div class="cosito-contenido">
             • Retoque técnico cada 21 días ⏳.<br>
-            • Retiro seguro con torno para no dañar tu uña 🧼.<br>
+            • Retiro profesional para no dañar tu uña 🧼.<br>
             • No muerdas ni arranques el sistema 🐭💔.
         </div>
     </div>
 
-    <div class="cosito" onclick="toggle(this)">
-        <div class="cosito-header">🚨 EMERGENCIAS RATIBU <span class="dimi-ratti">🐭</span> <span class="icono">▼</span></div>
-        <div class="cosito-contenido">
-            ¿Se te rompió una uñita? Escríbeme y agendamos reparación flash 🐭🚑.
-        </div>
-    </div>
-
-    <div class="quote">"Uñitas tiernas para manos que brillan" ✨🐭🎀</div>
     <div class="footer">✨ MEWI NAILS | BY MEL | 2026 ✨</div>
 </div>
 
