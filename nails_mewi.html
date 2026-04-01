@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mewi Nails  Refugio de Brillo Ratti</title>
+    <style>
+        :root {
+            --rosa-mewi: #ffb7c5;
+            --rosa-fuerte: #ff85a1;
+            --lila-mewi: #d8b4fe;
+            --fondo: #fff5f7;
+            --texto: #5d4d50;
+        }
+
+        body { background: var(--fondo); font-family: 'Segoe UI', sans-serif; padding: 20px; display: flex; justify-content: center; }
+        
+        .guia-contenedor { 
+            background: white; max-width: 450px; width: 100%; border-radius: 40px; 
+            padding: 25px; box-shadow: 0 10px 30px rgba(255, 183, 197, 0.3); text-align: center;
+        }
+
+        .logo-mewi { width: 100%; max-width: 250px; border-radius: 20px; margin-bottom: 10px; }
+        
+        .bienvenida { background: #fff0f5; padding: 20px; border-radius: 25px; margin-bottom: 20px; border: 1px dashed var(--rosa-fuerte); }
+        .bienvenida h1 { color: var(--rosa-fuerte); font-family: 'Brush Script MT', cursive; font-size: 38px; margin: 0; }
+        .bienvenida p { font-size: 13px; margin: 8px 0 0; color: var(--texto); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        .promo-card { 
+            background: #fff; border: 2px dashed var(--rosa-mewi); border-radius: 25px; 
+            padding: 20px; margin-bottom: 20px; min-height: 50px; display: flex; align-items: center; justify-content: center;
+        }
+
+        .social-bar { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+        
+        .btn-mewi {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            text-decoration: none; padding: 15px; border-radius: 50px; font-weight: 800; font-size: 14px;
+            transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-mewi:hover { transform: scale(1.02); }
+
+        .btn-wa { background: #25d366; color: white; }
+        .btn-ig { background: white; color: #E1306C; border: 1.5px solid #E1306C; }
+
+        .cosito {
+            background: #fffafb; border: 1.5px solid var(--rosa-mewi); border-radius: 20px;
+            margin-bottom: 10px; overflow: hidden; transition: 0.3s;
+        }
+
+        .cosito-header {
+            padding: 15px; cursor: pointer; display: flex; justify-content: space-between;
+            align-items: center; font-weight: 800; color: var(--rosa-fuerte); font-size: 11px; text-transform: uppercase;
+        }
+
+        .cosito-contenido {
+            max-height: 0; padding: 0 15px; background: white; transition: max-height 0.4s ease-out;
+            text-align: left; font-size: 13px; color: var(--texto); line-height: 1.5;
+        }
+
+        .cosito.abierto .cosito-contenido { max-height: 1500px; padding: 15px; }
+
+        .info-box { background: #fdf5ff; border-radius: 15px; padding: 12px; margin-bottom: 10px; border-left: 4px solid var(--lila-mewi); }
+        .tag-sistema { background: var(--rosa-mewi); color: white; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: bold; margin-bottom: 5px; display: inline-block; }
+
+        .footer { margin-top: 25px; font-size: 11px; font-weight: bold; color: var(--rosa-fuerte); opacity: 0.8; }
+        .quote { font-family: 'Brush Script MT', cursive; color: var(--lila-mewi); font-size: 26px; margin-top: 15px; line-height: 1.1; }
+        
+        .dimi-ratti { font-size: 9px; vertical-align: middle; }
+    </style>
+</head>
+<body>
+
+<div class="guia-contenedor">
+    <img src="https://i.postimg.cc/J00fzhLf/file-00000000f03c71f5ba680afa3dfc85c8.png" class="logo-mewi">
+    
+    <div class="bienvenida">
+        <h1>¡bienvenidas<span class="dimi-ratti"></span>! </h1>
+        <p>Tu refugio de amor y brillitos <span class="dimi-ratti"></span> favorito </p>
+    </div>
+
+    <div class="promo-card">
+        <p style="color: var(--rosa-mewi); font-weight: bold; font-style: italic; margin: 0;"> Próximamente dulces sorpresas en el refugio...</p>
+    </div>
+
+    <div class="social-bar">
+        <a href="https://wa.me/573197069009?text=Holiii%20Mel!%20Vengo%20por%20mis%20uñitas%20tiernas%20" class="btn-mewi btn-wa">
+             AGENDA TU CITA AQUÍ
+        </a>
+        <a href="https://instagram.com/mewinails_wiz" target="_blank" class="btn-mewi btn-ig">
+             NUESTRO INSTAGRAM @mewinails_wiz
+        </a>
+    </div>
+
+    <div class="cosito" onclick="toggle(this)">
+        <div class="cosito-header"> MENÚ DE SISTEMAS PRO <span class="dimi-ratti"></span> <span class="icono"></span></div>
+        <div class="cosito-contenido">
+            <span class="tag-sistema">MÁS PEDIDO</span>
+            <div class="info-box"><b>• Acrílico Escuplido:</b> Resistencia total moldeada a mano .</div>
+            <span class="tag-sistema">TECNOLOGÍA</span>
+            <div class="info-box"><b>• Polygel:</b> Híbrido flexible y ligero .</div>
+            <span class="tag-sistema">PROTECCIÓN</span>
+            <div class="info-box"><b>• Kapping Base Rubber:</b> Refuerzo nivelador para crecer sanitas .</div>
+            <span class="tag-sistema">EFECTO NATURAL</span>
+            <div class="info-box"><b>• Soft Gel:</b> Tips de gel delgaditos y naturales .</div>
+            <span class="tag-sistema">DURABILIDAD</span>
+            <div class="info-box"><b>• Semipermanente:</b> Color impecable por 21 días .</div>
+        </div>
+    </div>
+
+    <div class="cosito" onclick="toggle(this)">
+        <div class="cosito-header"> EL REFUGIO DEL ARTE (NAIL ART) <span class="dimi-ratti"></span> <span class="icono"></span></div>
+        <div class="cosito-contenido">
+            • <b>Diseños & Efectos:</b> Baby boomer, degradés, Chrome <span class="dimi-ratti"></span> y aurora.<br>
+            • <b>Mano Alzada Sencilla:</b> Detalles lindos y minimalistas <span class="dimi-ratti"></span> (corazoncitos, puntos, líneas, rastros cuchi).<br>
+            • <b>Joyas:</b> Cristales y dijes para un toque de brillo .<br><br>
+            <em>*El valor depende de la complejidad. Tin! </em>
+        </div>
+    </div>
+
+    <div class="cosito" onclick="toggle(this)">
+        <div class="cosito-header"> SALUD Y LIMPIEZA <span class="dimi-ratti"></span> <span class="icono"></span></div>
+        <div class="cosito-contenido">
+            • <b>Manicura Combinada:</b> Limpieza profunda de cutícula .<br>
+            • <b>Uñitas Lastimadas:</b> ¡Ojo! <span class="dimi-ratti"></span> Si tienes alguna uñita con hongo, herida abierta o muy débil, <b>por favor consúltanos antes de agendar</b>. La salud de tus manos es lo primero en este refugio.
+        </div>
+    </div>
+
+    <div class="cosito" onclick="toggle(this)">
+        <div class="cosito-header"> ¿POR QUÉ ELEGIRNOS? <span class="dimi-ratti"></span> <span class="icono"></span></div>
+        <div class="cosito-contenido">
+            • <b>Técnica Pro:</b> Especialista en sistemas esculpidos y salud de la uña .<br>
+            • <b>Higiene Total:</b> Instrumental 100% esterilizado para tu seguridad .<br>
+            • <b>Amor al Detalle:</b> No solo pintamos, creamos un diseño que hable de ti.<br>
+            • <b>Garantía Mewi:</b> 5 días de respaldo en tu set .
+        </div>
+    </div>
+
+    <div class="cosito" onclick="toggle(this)">
+        <div class="cosito-header"> MANTENIMIENTO Y REGLAS <span class="dimi-ratti"></span> <span class="icono"></span></div>
+        <div class="cosito-contenido">
+            • Retoque técnico cada 21 días .<br>
+            • Retiro seguro con torno para no dañar tu uña .<br>
+            • No muerdas ni arranques el sistema .
+        </div>
+    </div>
+
+    <div class="cosito" onclick="toggle(this)">
+        <div class="cosito-header"> EMERGENCIAS RATIBU <span class="dimi-ratti"></span> <span class="icono"></span></div>
+        <div class="cosito-contenido">
+            ¿Se te rompió una uñita? Escríbeme y agendamos reparación flash .
+        </div>
+    </div>
+
+    <div class="quote">"Uñitas tiernas para manos que brillan" </div>
+    <div class="footer"> MEWI NAILS | BY MEL | 2026 </div>
+</div>
+
+<script>
+    function toggle(elemento) {
+        const todos = document.querySelectorAll('.cosito');
+        todos.forEach(c => {
+            if (c !== elemento) c.classList.remove('abierto');
+        });
+        elemento.classList.toggle('abierto');
+    }
+</script>
+
+</body>
+</html>
